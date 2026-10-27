@@ -35,6 +35,14 @@ pip install -r requirements.txt
 python automacao_slides.py
 ```
 
-## Gerar o .exe (Windows)
+## Gerar o .exe
 
-Execute `build_exe.bat`. O executável é gerado em `dist\Automacao_Slides.exe`.
+**Automático (GitHub Actions):**
+- A cada push na `main`, o GitHub gera o `.exe`. Para baixar, vá em **Actions**, abra a execução mais recente e clique em **Artifacts**.
+- Para publicar uma versão oficial, crie uma tag. O `.exe` sai anexado em **Releases**:
+  ```bash
+  git tag v2.0.0
+  git push origin v2.0.0
+  ```
+
+**Manual (Windows):** execute `build_exe.bat`. O executável é gerado em `dist\Automacao_Slides.exe`.
